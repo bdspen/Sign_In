@@ -1,11 +1,10 @@
-# Angular Student Roster App
-#### _An app that allows a user to add names to a sign up list and those users can then sign in/out of the list.
-a user can also see who is signed in or signed out of the list_
+# Angular Sign In Sheet
+#### _An app that allows a user to add names to a sign up list and those users can then sign in/out of the list. A user can also see who is signed in or signed out of the list_
 ### By Ben Spenard
 #### Setup:
 * _Clone this repository onto your computer_
 * _navigate into the project folder using your command line_
-* _Run the command Sign_In$ python -m SimpleHTTPServer
+* _Run the command Sign_In$ python -m SimpleHTTPServer_
 * _Open your browser and go to the address localhost:8000_
 
 ## Technologies Used
