@@ -12,6 +12,7 @@ signIn.config(function($stateProvider, $urlRouterProvider){
   });
   $stateProvider.state('whos-here',{
     url:"/whos-here",
-    templateUrl: "partials/whos-here.html"
+    templateUrl: "partials/whos-here.html",
+    controller: "StudentsCtrl"
   });
 });

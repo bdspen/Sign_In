@@ -1,21 +1,28 @@
 
-<form ng-submit="StudentsFactory.addStudent()" class="form-inline" role="form">
-  <div class="form-group">
-    <label for="add-student">Add a new student:</label>
-    <input id="add-student" type="text" ng-model="StudentsFactory.studentName" class="form-control" placeholder="Enter the student's name">
+<div class="row">
+  <div class="col-md-6">
+    <button class="btn btn-primary pull-right" ui-sref="home">Home</button>
+    <button class="btn btn-primary pull-right" ui-sref="whos-here">See Who's Here</button>
+    <br>
+    <form ng-submit="StudentsFactory.addStudent()" class="form-inline" role="form">
+      <div class="form-group">
+        <label for="add-student">Add a new student:</label>
+        <input id="add-student" type="text" ng-model="StudentsFactory.studentName" class="form-control" placeholder="Enter the student's name">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+
+    <div ng-show="students.length">
+
+      <h2>Students</h2>
+      <ul id="sign-in-list">
+        <li ng-repeat="item in students">
+          <h3>{{ item.name }}
+          <button ng-hide="item.signedIn == true" ng-click="signIn(item)" class="btn-xs btn-success">Sign-In</button>
+          <button ng-hide="item.signedIn == false" ng-click="signOut(item)" class="btn-xs btn-danger">Sign-Out</button></li>
+          </h3>
+      </ul>
+
+    </div>
   </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
-
-<div ng-show="students.length">
-
-  <h3>Students</h3>
-  <ul>
-    <li ng-repeat="item in students">
-      <h3>{{ item.name }}
-      <button ng-hide="item.signedIn == true" ng-click="signIn(item)" class="btn-xs btn-success">Sign-In</button>
-      <button ng-hide="item.signedIn == false" ng-click="signOut(item)" class="btn-xs btn-danger">Sign-Out</button></li>
-      </h3>
-  </ul>
-
 </div>
