@@ -10,8 +10,8 @@ signIn.config(function($stateProvider, $urlRouterProvider){
     templateUrl: "partials/sign-in.html",
     controller: "StudentsCtrl"
   });
-  $stateProvider.state('teacher',{
-    url:"/:teacher",
-    templateUrl: "partials/teacher.html"
+  $stateProvider.state('whos-here',{
+    url:"/whos-here",
+    templateUrl: "partials/whos-here.html"
   });
 });
