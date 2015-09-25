@@ -6,9 +6,10 @@
 
   <h1>Who's Here?</h1>
   <div ng-show="students.length">
-    <h2>Students</h2>
+    <h2>Students in attendance</h2>
+
     <ul>
-      <li ng-repeat="item in students">
+      <li ng-repeat="item in students | filter: item.signedIn == true">
         <h3>{{ item.name }}</h3>
         </li>
     </ul>
