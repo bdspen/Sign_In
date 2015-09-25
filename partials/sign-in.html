@@ -11,9 +11,11 @@
 
   <h3>Students</h3>
   <ul>
-    <li ng-repeat="item in students">{{ item.name }}
-      <button ng-click="signIn(item)" class="btn-xs btn-success">Sign-In</button>
-      <button ng-click="signOut(item)" class="btn-xs btn-danger">Sign-Out</button></li>
+    <li ng-repeat="item in students">
+      <h3>{{ item.name }}
+      <button ng-hide="item.signedIn == true" ng-click="signIn(item)" class="btn-xs btn-success">Sign-In</button>
+      <button ng-hide="item.signedIn == false" ng-click="signOut(item)" class="btn-xs btn-danger">Sign-Out</button></li>
+      </h3>
   </ul>
 
 </div>
