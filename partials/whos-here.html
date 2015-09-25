@@ -9,9 +9,15 @@
     <h2>Students in attendance</h2>
 
     <ul>
-      <li ng-repeat="item in students | filter: item.signedIn == true">
+      <li ng-repeat="item in students | filter: item.signedIn = true">
         <h3>{{ item.name }}</h3>
         </li>
     </ul>
   </div>
+  <h2>Students not in attendance</h2>
+  <ul>
+    <li ng-repeat="item in students | filter: item.signedIn = false">
+      <h3>{{ item.name }}</h3>
+    </li>
+  </ul>
 </div>
