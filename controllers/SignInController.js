@@ -3,4 +3,8 @@ signIn.controller('SignInCtrl', function SignInCtrl($scope, StudentsFactory){
   $scope.signIn = function(student) {
     student.signedIn = true;
   };
+  $scope.signOut = function(student) {
+    student.signedIn = false;
+  };
+
 });
