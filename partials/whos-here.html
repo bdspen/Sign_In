@@ -5,19 +5,20 @@
   </div>
 
   <h1>Who's Here?</h1>
-  <div ng-show="students.length">
+  <div ng-show="here.length">
     <h2>Students in attendance</h2>
 
     <ul>
-      <li ng-repeat="item in students | filter: item.signedIn = true">
+      <li ng-repeat="item in (here = (students | filter:{signedIn: true}))">
         <h3>{{ item.name }}</h3>
         </li>
     </ul>
   </div>
-  <h2>Students not in attendance</h2>
-  <ul>
-    <li ng-repeat="item in students | filter: item.signedIn = false">
-      <h3>{{ item.name }}</h3>
-    </li>
-  </ul>
+  <div ng-show="notHere.length">
+    <h2>Students not in attendance</h2>
+    <ul>
+      <li ng-repeat="item in (notHere = (students | filter:{signedIn: false}))">
+        <h3>{{ item.name }}</h3>
+      </li>
+    </ul>
 </div>
