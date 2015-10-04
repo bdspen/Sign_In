@@ -1,3 +1,9 @@
 #sign-in-list {
   list-style: none;
 }
+.btn-toolbar {
+  display: inline-block;
+}
+.form-control {
+  max-width: 75%;
+}
